@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Proyecto Emociones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 700px;
+            background: #121212;
+            border: 1px solid #ff3333;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        h2 {
+            font-family: 'Impact', sans-serif;
+            color: #ff3333;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .pregunta-box {
+            margin-bottom: 25px;
+            background-color: #161616;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .pregunta-texto {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .opcion-label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #aaa;
+            cursor: pointer;
+            padding: 8px;
+            transition: background 0.2s;
+        }
+
+        .opcion-label:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .opcion-label input {
+            margin-right: 12px;
+            accent-color: #ff3333;
+        }
+
+        .btn-evaluar {
+            background-color: #ff3333;
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .btn-evaluar:hover {
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Bloque de Diagnóstico */
+        .resultado-box {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #1a1010;
+            border-left: 4px solid #ff3333;
+            color: #e0e0e0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .resultado-box strong {
+            color: #ff3333;
+            text-transform: uppercase;
+        }
+
+        .btn-regresar {
+            background-color: transparent;
+            color: #666;
+            border: 1px solid #333;
+            padding: 12px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 25px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .btn-regresar:hover {
+            color: #fff;
+            border-color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .main-container { padding: 25px 20px; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h2>04. Diagnóstico Interno</h2>
+        
+        <!-- Pregunta 1 -->
+        <div class="pregunta-box">
+            <div class="pregunta-texto">1. Cuando explota una emoción muy intensa (ira, frustración), ¿cuál es tu descarga?</div>
+            <label class="opcion-label">
+                <input type="radio" name="p1" value="3"> Desahogo el ruido hablando con alguien o gano control respirando.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p1" value="2"> Me encierro en mi espacio en completo silencio hasta que baje la marea.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p1" value="1"> Actúo de golpe bajo el impulso del momento, rompiendo el control.
+            </label>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta-box">
+            <div class="pregunta-texto">2. ¿Qué tan seguido descifras con precisión el origen real de lo que sientes?</div>
+            <label class="opcion-label">
+                <input type="radio" name="p2" value="3"> Casi siempre sé con exactitud qué cable cruzó la señal.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p2" value="2"> A veces me toma tiempo procesar si es enojo, tristeza o confusión.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p2" value="1"> Rara vez; el malestar me invade por completo sin entender la razón.
+            </label>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta-box">
+            <div class="pregunta-texto">3. Frente a una situación de alto estrés escolar o personal, ¿cómo reacciona tu mente?</div>
+            <label class="opcion-label">
+                <input type="radio" name="p3" value="3"> Analizo las opciones fríamente y organizo mis pasos.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p3" value="2"> Me sobrecargo de ansiedad temporalmente, pero termino resolviéndolo.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p3" value="1"> Me bloqueo por completo o prefiero evadir el problema para no lidiar con él.
+            </label>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta-box">
+            <div class="pregunta-texto">4. Cuando alguien de tu entorno opina algo que choca directamente con lo que piensas, ¿qué pasa?</div>
+            <label class="opcion-label">
+                <input type="radio" name="p4" value="3"> Escucho su postura con calma, defiendo la mía con respeto y sin engancharme.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p4" value="2"> Me lo tomo de forma personal y me genera molestia interna, aunque me calle.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p4" value="1"> Entro en confrontación directa de inmediato o ataco sus argumentos con agresividad.
+            </label>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta-box">
+            <div class="pregunta-texto">5. ¿Qué lugar ocupa tu red de apoyo (amigos, familia, especialistas) cuando sientes que el caos te supera?</div>
+            <label class="opcion-label">
+                <input type="radio" name="p5" value="3"> Acudo a ellos sin dudar; sé que exteriorizar lo que me pasa me ayuda.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p5" value="2"> Me cuesta trabajo pedir ayuda, pero si me lo ofrecen termino aceptándolo.
+            </label>
+            <label class="opcion-label">
+                <input type="radio" name="p5" value="1"> Ninguno. Creo firmemente que nadie me entiende y prefiero cargar el peso a solas.
+            </label>
+        </div>
+
+        <button class="btn-evaluar" onclick="calcularResultado()">
+            Analizar Frecuencia
+        </button>
+
+        <div id="resultado" class="resultado-box"></div>
+
+        <button class="btn-regresar" onclick="window.location.href='indice.html'">
+            Volver al Setlist
+        </button>
+    </div>
+
+    <script>
+        function calcularResultado() {
+            var p1 = document.querySelector('input[name="p1"]:checked');
+            var p2 = document.querySelector('input[name="p2"]:checked');
+            var p3 = document.querySelector('input[name="p3"]:checked');
+            var p4 = document.querySelector('input[name="p4"]:checked');
+            var p5 = document.querySelector('input[name="p5"]:checked');
+
+            // Validación de que todas estén contestadas
+            if (!p1 || !p2 || !p3 || !p4 || !p5) {
+                alert("Debes marcar las 5 opciones para procesar el diagnóstico completo.");
+                return;
+            }
+
+            // Sumatoria de variables de 5 a 15 puntos
+            var total = parseInt(p1.value) + parseInt(p2.value) + parseInt(p3.value) + parseInt(p4.value) + parseInt(p5.value);
+            var resultBox = document.getElementById('resultado');
+            var msg = "";
+
+            // Nueva escala de rango ajustada a 5 preguntas
+            if (total >= 12) {
+                msg = "<strong>Frecuencia Estable (Puntaje: " + total + "/15).</strong> Muestras un excelente control y dominio de tu entorno interno. Sabes descifrar tus emociones, asimilar el estrés y apoyarte en tus aliados sin perder tu centro ante las distorsiones de la rutina.";
+            } else if (total >= 8) {
+                msg = "<strong>Señal Distorsionada (Puntaje: " + total + "/15).</strong> Reconoces el ruido, pero la calibración final aún falla. Logras salir adelante, pero la intensidad o los bloqueos te restan energía antes de encontrar la asertividad necesaria.";
+            } else {
+                msg = "<strong>Alerta de Colapso (Puntaje: " + total + "/15).</strong> Tus impulsos o el aislamiento están tomando por completo el control. Cargar todo el caos a solas o reaccionar a la defensiva satura tu sistema. Es momento de bajar el ruido y buscar ayuda en tu red de apoyo.";
+            }
+
+            resultBox.innerHTML = msg;
+            resultBox.style.display = "block";
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

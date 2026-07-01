@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambios - Proyecto Emociones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 800px;
+            background: #121212;
+            border: 1px solid #ff3333;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        h2 {
+            font-family: 'Impact', sans-serif;
+            color: #ff3333;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .texto-contenido {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        .lista-cambios {
+            margin: 0 0 30px 0;
+            padding-left: 20px;
+            font-size: 1.05rem;
+            color: #b0b0b0;
+        }
+
+        .lista-cambios li {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            list-style-type: square;
+            text-align: justify;
+        }
+
+        .lista-cambios strong {
+            color: #ff3333;
+            display: inline-block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-regresar {
+            background-color: transparent;
+            color: #888;
+            border: 1px solid #444;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: all 0.2s;
+        }
+
+        .btn-regresar:hover {
+            color: #fff;
+            border-color: #fff;
+            background-color: #161616;
+        }
+
+        @media (max-width: 600px) {
+            .main-container { padding: 25px 20px; }
+            h2 { font-size: 1.8rem; }
+            .btn-regresar { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h2>02. La Tormenta Perfecta de la Adolescencia</h2>
+        
+        <p class="texto-contenido">
+            La adolescencia no es simplemente una etapa de rebeldía infundada; es un periodo crítico de reestructuración profunda que afecta los cimientos biológicos, psicológicos y sociales de una persona. Durante esta transición, el cerebro experimenta una metamorfosis radical, lo que provoca que las emociones se perciban bajo una amplificación extrema y una reactividad constante ante el entorno.
+        </p>
+
+        <p class="texto-contenido">
+            Para entender la magnitud de esta tormenta interna, es necesario desglosar los factores neurobiológicos y sociales que entran en colisión directa:
+        </p>
+
+        <ul class="lista-cambios">
+            <li>
+                <strong>Desarrollo Cerebral Asincrónico:</strong> 
+                Existe una brecha de maduración crítica en el cerebro. La amígdala —el núcleo primitivo encargado de las respuestas emocionales más viscerales, la impulsividad y la detección de amenazas— alcanza su pleno desarrollo mucho antes de que lo haga la corteza prefrontal. Esta última área es el centro del control ejecutivo, la planificación a largo plazo y la regulación de impulsos, y no termina de madurar sino hasta los 25 años. El resultado es un motor emocional hiperactivo corriendo con unos frenos que apenas se están construyendo.
+            </li>
+            <li>
+                <strong>El Cóctel Hormonal y Químico:</strong> 
+                Las fluctuaciones drásticas de estrógenos y testosterona no solo transforman la anatomía física, sino que alteran directamente la sensibilidad de los receptores de dopamina y serotonina en el cerebro. Esto genera que los estímulos cotidianos provoquen picos intensos de euforia o caídas abruptas en la apatía, haciendo que pequeños contratiempos se experimenten como crisis absolutas.
+            </li>
+            <li>
+                <strong>Fricción Social e Identidad:</strong> 
+                Se produce una transición radical desde el núcleo de protección familiar hacia la validación del grupo de pares. El miedo al rechazo social se procesa neurológicamente en las mismas áreas que el dolor físico. Esta necesidad imperiosa de construir una identidad propia, sumada a la vulnerabilidad social, genera un estado de alerta y defensiva constante frente al mundo exterior.
+            </li>
+        </ul>
+
+        <button class="btn-regresar" onclick="window.location.href='indice.html'">
+            Volver al Setlist
+        </button>
+    </div>
+
+</body>
+</html>

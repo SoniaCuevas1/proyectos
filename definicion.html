@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definición - Proyecto Emociones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 800px;
+            background: #121212;
+            border: 1px solid #ff3333;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        h2 {
+            font-family: 'Impact', sans-serif;
+            color: #ff3333;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Impact', sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .texto-contenido {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta-info {
+            background-color: #1a1515;
+            border-left: 4px solid #ff3333;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 1rem;
+            color: #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            line-height: 1.6;
+        }
+
+        .tarjeta-info strong {
+            color: #ff3333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-regresar {
+            background-color: transparent;
+            color: #888;
+            border: 1px solid #444;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: all 0.2s;
+            margin-top: 20px;
+        }
+
+        .btn-regresar:hover {
+            color: #fff;
+            border-color: #fff;
+            background-color: #161616;
+        }
+
+        @media (max-width: 600px) {
+            .main-container { padding: 25px 20px; }
+            h2 { font-size: 1.8rem; }
+            .btn-regresar { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h2>01. Anatomía del Caos: ¿Qué son las Emociones?</h2>
+        
+        <p class="texto-contenido">
+            Las emociones no son debilidades ni simples accidentes de nuestra mente; son complejos mecanismos psicofisiológicos de supervivencia. Representan modos de adaptación automáticos ante estímulos ambientales o internos, activándose en el instante en que percibimos un objeto, una persona, un lugar, un peligro inminente o un recuerdo cargado de significado. Son corrientes de energía pura diseñadas para movernos a la acción.
+        </p>
+
+        <p class="texto-contenido">
+            Lejos de ser abstractas, las emociones se manifiestan a través de un sistema de respuesta triple que altera por completo nuestra realidad:
+        </p>
+
+        <h3>1. El Componente Neurovegetativo (La Respuesta Biológica)</h3>
+        <p class="texto-contenido">
+            Es la primera línea de fuego. Implica la activación involuntaria del sistema nervioso autónomo y endocrino. Cuando experimentas una emoción fuerte, tu ritmo cardíaco se dispara, la presión sanguínea aumenta, la respiración se acelera y se liberan hormonas como el cortisol y la adrenalina. Tu cuerpo se prepara físicamente para la batalla o la huida.
+        </p>
+
+        <h3>2. El Componente Conductual (La Expresión Externa)</h3>
+        <p class="texto-contenido">
+            Involucra el lenguaje no verbal, los cambios en el tono de voz, la postura corporal y las microexpresiones faciales. Es la señal que enviamos al exterior, muchas veces de forma inconsciente, comunicando a quienes nos rodean nuestro estado interno antes de que hayamos articulado una sola palabra.
+        </p>
+
+        <h3>3. El Componente Cognitivo (La Experiencia Vivencial)</h3>
+        <p class="texto-contenido">
+            Es la interpretación subjetiva que le damos a lo que sentimos. Aquí es donde procesamos la emoción, la etiquetamos (miedo, furia, melancolía) y le asignamos un significado basado en nuestra historia personal y nuestras creencias. Es el filtro mental que decide si el impulso nos domina o si logramos dominarlo a él.
+        </p>
+
+        <div class="tarjeta-info">
+            <strong>Frecuencia de onda evolutiva:</strong> Ninguna emoción carece de propósito. El miedo nos mantiene con vida, la ira establece límites defensivos frente a la injusticia y la tristeza nos obliga a replegarnos para sanar heridas internas. Intentar apagarlas es apagar nuestra propia naturaleza.
+        </div>
+
+        <button class="btn-regresar" onclick="window.location.href='indice.html'">
+            Volver al Setlist
+        </button>
+    </div>
+
+</body>
+</html>
