@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - Proyecto Emociones</title>
+    <!-- Cargamos una fuente estilo Chiller/Terror desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Metal+Mania&family=Segoe+UI&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: 'Impact', 'Arial Black', sans-serif;
-            background: linear-gradient(135deg, #0f0c20 0%, #151015 50%, #000000 100%);
-            color: #e0e0e0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            /* IMAGEN DE FONDO: Cambia 'fondo.jpg' por el nombre de tu archivo */
+            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(0, 0, 0, 0.9)), url('2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         .main-container {
             width: 90%;
             max-width: 800px;
-            background: rgba(20, 20, 25, 0.85);
+            background: rgba(15, 15, 18, 0.9);
             border: 2px solid #ff3333;
-            box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
+            box-shadow: 0 0 30px rgba(255, 51, 51, 0.4);
             border-radius: 4px;
             padding: 40px 20px;
             text-align: center;
@@ -31,19 +38,31 @@
         }
 
         .header-title {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
+            font-family: 'Metal Mania', display;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
             color: #888;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
 
-        .titulo-proyecto {
-            font-size: 3rem;
-            color: #ff3333;
-            text-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
-            text-transform: uppercase;
+        /* Contenedor del título con el estilo distorsionado tipo Chiller */
+        .titulo-contenedor {
+            min-height: 80px; /* Evita que el diseño salte mientras se escribe */
             margin: 10px 0 30px 0;
+        }
+
+        .titulo-proyecto {
+            font-family: 'Creepster', cursive;
+            font-size: 3.5rem;
+            color: #ff3333;
+            text-shadow: 0 0 15px rgba(255, 51, 51, 0.7);
+            text-transform: uppercase;
+            margin: 0;
+            display: inline-block;
+            border-right: 3px solid #ff3333; /* El cursor que parpadea */
+            white-space: normal;
+            animation: parpadeo-cursor 0.7s step-end infinite;
         }
 
         .imagen-portada {
@@ -57,7 +76,6 @@
         }
 
         .descripcion-proyecto {
-            font-family: 'Segoe UI', sans-serif;
             font-size: 1.2rem;
             color: #b0b0b0;
             max-width: 600px;
@@ -86,8 +104,14 @@
             transform: translateY(-2px);
         }
 
+        /* Animación del cursor mecánico parpadeante */
+        @keyframes parpadeo-cursor {
+            from, to { border-color: transparent }
+            50% { border-color: #ff3333; }
+        }
+
         @media (max-width: 600px) {
-            .titulo-proyecto { font-size: 2rem; }
+            .titulo-proyecto { font-size: 2.2rem; }
             .descripcion-proyecto { font-size: 1rem; }
             .btn-ingresar { width: 100%; padding: 15px 0; }
         }
@@ -97,9 +121,12 @@
 
     <div class="main-container">
         <div class="header-title">Proyecto Emociones</div>
-        <h1 class="titulo-proyecto">Las Emociones en la Adolescencia</h1>
         
-        <img class="imagen-portada" src="1.webp" alt="Portada Rock">
+        <div class="titulo-contenedor">
+            <h1 class="titulo-proyecto" id="efecto-escritura"></h1>
+        </div>
+        
+        <img class="imagen-portada" src="ci.jpeg" alt="Portada Rock">
 
         <p class="descripcion-proyecto">
             Una investigación sin censura sobre el caos, la intensidad y el desarrollo socioemocional en la etapa más crítica de la vida.
@@ -111,6 +138,27 @@
     </div>
 
     <script>
+        // Configuración de la animación de escritura
+        const textoOriginal = "Las Emociones en la Adolescencia";
+        const elementoTitulo = document.getElementById("efecto-escritura");
+        let indice = 0;
+
+        function escribirTexto() {
+            if (indice < textoOriginal.length) {
+                elementoTitulo.innerHTML += textoOriginal.charAt(indice);
+                indice++;
+                setTimeout(escribirTexto, 100); // Velocidad en milisegundos por letra
+            } else {
+                // Cuando termina, quita el borde del cursor mecánico
+                elementoTitulo.style.borderRight = "none";
+            }
+        }
+
+        // Inicia el efecto cuando carga la página
+        window.onload = function() {
+            escribirTexto();
+        };
+
         function irAlRegistro() {
             window.location.href = "registro.html";
         }
